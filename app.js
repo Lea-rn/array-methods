@@ -266,7 +266,7 @@
 
 // Splice :
 //  remove 3 elements from an array starting from index 2.
-const arr2 = [6,7,8,9,10,20,30,50,60]
+// const arr2 = [6,7,8,9,10,20,30,50,60]
 
 ////// put your answer here ...........
 ///////////////////////////
@@ -281,12 +281,33 @@ const arr2 = [6,7,8,9,10,20,30,50,60]
 
 ////// put your answer here ...........
 ///////////////////////
+// const arrOfNumbers= [1,2,3,4,5,6] ; 
+
+// const sumNumOfArray = function (arr){
+  
+//   let sum = 0 ;  
+//   arr.forEach((num)=> sum = sum + num )
+//   return sum ; 
+ 
+// }
+
+// console.log(sumNumOfArray(arrOfNumbers))
+
+
 
 
 
 // Remove Element by Index:
 // Given an array, remove the element at a specific index using splice.
 ////// put your answer here ...........
+
+// const arrOfNumbers= [1,2,3,4,5,6] 
+// console.log(arrOfNumbers)
+// let indexToRemove = 3 ; 
+// arrOfNumbers.splice(indexToRemove,1)
+// console.log(arrOfNumbers)
+
+
 ///////////////////////
 
 // Replace Elements :
@@ -294,48 +315,143 @@ const arr2 = [6,7,8,9,10,20,30,50,60]
 ////// put your answer here ...........
 /////////////////////
 
+// const names = ["peter" , "nicole" , "jhon"] ; 
+
+// names.splice(1,2 , "youssef","talel")
+// console.log(names)
+
+
 // Extract Last 3 Elements:
 // Use slice to get the last 3 elements from an array.
 ////// put your answer here ...........
+
+// const arrOfNumbers= [1,2,3,4,5,6] ; 
+// console.log(arrOfNumbers.slice(-3))
 ////////////////////
 
 // Concatenate and Sort:
 // Concatenate two arrays, then sort the result in ascending order.
 ////// put your answer here ...........
 ////////////////////
+// const arr1 = [5,3,2,1,4] 
+// const arr2 = [9,8,6,10,7]
+
+// let arr3 = arr1.concat(arr2)
+
+// arr3.sort((a,b)=>a-b)
+// console.log(arr3)
 
 // Find Maximum Number:
 // Use forEach to find the largest number in an array.
 ////// put your answer here ...........
 
+
+/// first methode :
+// arr1.sort((a,b)=>b-a) ; 
+// console.log(arr1[0])
+
+/// second method :: 
+// const arr1 = [5,3,2,15,4,10,20] 
+// function max (arr){
+
+// let maxNumber = arr [0]   //// ==> 20
+// arr.forEach ((num)=> {    //// 5
+// if (num > maxNumber) {  
+//   maxNumber = num
+// }
+// })
+
+// return maxNumber
+// }
+
+// console.log(max(arr1))
+
+
+
 ////////////////
 
 // Count Occurrences of a Value:
 // Write a function that counts how many times a specific value appears in an array using forEach.
-// const arr = [1,10,2,10,5,6,10,100]
+
 
 ////// put your answer here ...........
+
+// const numbers = [1,10,2,10,5,6,10,100,6]
+// const countElement = function (arr , value){
+// let count = 0 ; 
+// arr.forEach((num)=>{
+//   if (num === value) {
+//     count++
+//   }
+// })
+
+// return count
+// } ; 
+
+// console.log(countElement(numbers , 10))
 
 // Filter Negative Numbers:
 // Use forEach  to remove all negative numbers from an array.
 
 ////// put your answer here ...........
+// const numbers = [-1,-2,-3,10,-100,6,9,70]  ;
+// console.log(numbers)
+
+
+// function positiveNumber (arr) {
+//   let positive = [] ; 
+//   arr.forEach((ele)=> {
+//     if (ele > 0) {
+//   positive.push(ele)
+//     }
+//   })
+
+//   return positive
+// }
+
+// console.log(positiveNumber(numbers))
 
 ////////////////////
 
 // Flatten an Array of Arrays:
 // Use concat and forEach to flatten an array of arrays (e.g., [[1, 2], [3, 4]] into [1, 2, 3, 4]).
 ////////////////////////////////
-// const arr = [[1,2,3],[10,20,30],[50,60,100]]
+const arr = [[1,2,3],[10,20,30],[50,60,100]]
 // console.log(arr) /////====> [1,2,3,10,20,30,50,60,100]
 
 ////// put your answer here ...........
+
+// [1,2,3],[10,20,30]  //// [1,2,3,10,20,30]
+//// [] , [4,5,6,7]  /// 
+
+// function flatten (arr){
+// let flat = [] ;   ///// [1,2,3].concat([10,20,30]) ===> [1,2,3,10,20,30].....
+// arr.forEach((ele)=> {
+//   flat = flat.concat(ele)
+// })
+// return flat
+// }
+// console.log(flatten(arr))
+
+
 
 // Advanced Problems:://////////////////////////////////////////////////////////////////////////////
 
 // Remove Duplicates from an Array:
 // Use forEach and includes to remove duplicates from an array.
 ////// put your answer here ...........
+// const numbers = [2,10,5,7,10,8,50,10,50,8,200] ;
+// function removeDuplicates (array) {
+// let withoutDouble = [] ; /// [2,10,5,7]
+// array.forEach((ele)=> {  /// 2
+//   if (!withoutDouble.includes(ele)){
+//     withoutDouble.push(ele)
+//   }
+// })
+// return withoutDouble
+// }
+
+// console.log(removeDuplicates(numbers))
 
 //////////////////////////////////
 
@@ -343,11 +459,32 @@ const arr2 = [6,7,8,9,10,20,30,50,60]
 // Write a function that removes all occurrences of a specific value from an array using forEach and splice.
 ////// put your answer here ...........
 
+// const numbers = [2,10,5,7,10,8,50,10,50,8,200]
+// function removeElement (arr,value) {
+// arr.forEach((num,i)=> {
+//   if (num === value) {
+//     arr.splice(i,1)
+//   }
+// })
+// return arr
+// }
+
+// console.log(removeElement(numbers,8))
 ////////////////////////////////////////
 
 // Sort an Array in Descending Order:
 // Create a function that sorts an array in descending order using reverse and the sort method.
 ////// put your answer here ...........
+
+// const numbers = [-1,-2,-3,10,-100,6,9,70]  
+
+// function descinding (arr) {
+//   const arr2 = arr.sort((a,b)=>a-b)
+//    arr2.reverse()
+//    return arr2 
+// }
+
+// console.log(descinding(numbers))
 //////////////////////////////////////
 
 
